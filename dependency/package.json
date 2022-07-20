@@ -1,0 +1,10 @@
+{
+    "name": "repro-dep",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./build/types/index.d.ts",
+            "import": "./build/esm/index.js"
+        }
+    }
+}
