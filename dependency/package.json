@@ -1,10 +1,15 @@
 {
-    "name": "repro-dep",
-    "type": "module",
+    "name": "dependency",
     "exports": {
         ".": {
-            "types": "./build/types/index.d.ts",
-            "import": "./build/esm/index.js"
+            "import": {
+                "types": "./build/types/index.d.ts",
+                "default": "./build/esm/index.mjs"
+            },
+            "require": {
+                "types": "./build/types/index.d.ts",
+                "default": "./build/cjs/index.cjs"
+            }
         }
     }
 }

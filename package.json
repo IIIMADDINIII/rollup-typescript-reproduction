@@ -1,14 +1,18 @@
 {
     "name": "repro",
-    "type": "module",
+    "type": "commonjs",
     "dependencies": {
-        "dependency": "file:./dependency"
+        "dependency": "file:dependency"
     },
     "devDependencies": {
-        "@rollup/plugin-node-resolve": "^13.3.0",
-        "@rollup/plugin-typescript": "^8.3.3",
-        "tsc-alias": "^1.7.0",
-        "tslib": "^2.4.0",
-        "typescript": "^4.7.4"
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@rollup/plugin-typescript": "^10.0.1",
+        "rollup": "^3.7.4",
+        "tsc-alias": "^1.8.2",
+        "tslib": "^2.4.1",
+        "typescript": "^4.9.4"
+    },
+    "scripts": {
+        "build": "rollup --config rollup.config.ts --configPlugin typescript"
     }
 }
